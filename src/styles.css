@@ -1,0 +1,33 @@
+.loan{
+  border: 2px solid #acaaaa;
+  border-radius: 10px;
+box-shadow:10px 14px 14px rgb(0,0,0,0.15);
+
+display: flex;
+justify-content: center;
+gap: 10px;
+
+width: 90%;
+max-width: 600px;
+box-sizing: border-box;
+margin: auto;
+}
+
+.results{
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #102C57;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #706233;
+}
