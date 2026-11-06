@@ -73,3 +73,34 @@ align-items: center;
 .headers p {
   margin: 0; /* Removes the browser's default spacing */
 }
+
+/* Make the app responsive */
+* {
+  box-sizing: border-box;
+}
+
+.loan {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.loan > div {
+  flex: 1;
+  min-width: 280px;
+}
+
+input {
+  width: 100%;
+  max-width: 100%;
+}
+
+.results {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .loan {
+    flex-direction: column;
+  }
+}
