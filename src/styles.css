@@ -16,6 +16,16 @@ margin: auto;
 .results{
   display: flex;
   flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border: 2px solid wheat;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 10px 10px 10px rgb(0,0,0,0.10px);
+  box-sizing: border-box;
 }
 
 button {
@@ -30,4 +40,36 @@ button {
 
 button:hover {
   background-color: #706233;
+}
+
+input{
+  width: 200px;
+height: 20px;
+}
+
+label{
+  width: 200px;
+height: 20px;
+
+display: inline-block;
+}
+h2{
+  font-family: 'Fredoka', sans-serif;
+  font-size: 25px;
+  background: linear-gradient(135deg, #a1d2f1, #2be4a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headers{
+  display: flex;
+  justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.headers h1,
+.headers h3,
+.headers p {
+  margin: 0; /* Removes the browser's default spacing */
 }

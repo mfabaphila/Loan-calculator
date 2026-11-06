@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./styles.css"
 
 export default function App() {
@@ -21,6 +21,7 @@ export default function App() {
     const [debtError, setDebtError] = useState('');
     const [surnameError, setSurnameError] = useState('');
     const [emailError, setEmailError] = useState('');
+    const[weather, setWeather] =useState(null)
 
     const loginUser = () => {
         if (validation() === true) {
@@ -100,12 +101,23 @@ export default function App() {
 
         setAdvice(advice);
     }
+ useEffect(()=>{
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=-33.9249&longitude=18.4241&current=temperature_2m,weather_code")
+    .then((results)=>results.json())
+    .then((data)=>{
+     setWeather(data.current.temperature_2m + " °C");
+    })
+ },
+    [])
+
 
     return (
         <>
-
+<div className="headers"> 
             <h1>Loan Calculator</h1>
             <h3>How Much Can I afford to loan?</h3>
+            <p style={{color:"red"}}>{weather}</p>
+            </div>
 
             <div className="loan">
 
